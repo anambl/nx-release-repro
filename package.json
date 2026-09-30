@@ -7,6 +7,7 @@
     "release": "nx release --skip-publish"
   },
   "devDependencies": {
+    "@nx/js": "23.2.1",
     "nx": "^23.0.1"
   }
 }
