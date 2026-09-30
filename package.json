@@ -1,0 +1,12 @@
+{
+  "name": "nx-release-repro",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "release": "nx release --skip-publish"
+  },
+  "devDependencies": {
+    "nx": "^23.0.1"
+  }
+}
