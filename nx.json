@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "release": {
+    "projectsRelationship": "independent",
+    "versionPlans": {
+      "ignorePatternsForPlanCheck": ["**/*.md", "pnpm-lock.yaml"]
+    },
+    "changelog": {
+      "projectChangelogs": true
+    },
+    "version": {
+      "specifierSource": "version-plans",
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk"
+    }
+  }
+}
