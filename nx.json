@@ -1,7 +1,24 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "nx-release-publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo 'Publish disabled: this is the version-plans demo repo' && exit 0"
+      }
+    }
+  },
   "release": {
-    "projectsRelationship": "independent",
+    "groups": {
+      "group-a": {
+        "projectsRelationship": "independent",
+        "projects": ["pkg-a"]
+      },
+      "group-b": {
+        "projectsRelationship": "independent",
+        "projects": ["pkg-b"]
+      }
+    },
     "versionPlans": {
       "ignorePatternsForPlanCheck": ["**/*.md", "pnpm-lock.yaml"]
     },
