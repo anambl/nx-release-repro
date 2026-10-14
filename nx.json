@@ -12,23 +12,33 @@
     "groups": {
       "group-a": {
         "projectsRelationship": "independent",
-        "projects": ["pkg-a"]
+        "projects": [
+          "pkg-a"        ]
       },
       "group-b": {
         "projectsRelationship": "independent",
-        "projects": ["pkg-b"]
+        "projects": [
+          "pkg-b"
+        ]
       }
     },
     "versionPlans": {
-      "ignorePatternsForPlanCheck": ["**/*.md", "pnpm-lock.yaml"]
+      "ignorePatternsForPlanCheck": [
+        "**/*.md",
+        "pnpm-lock.yaml"
+      ]
     },
     "changelog": {
-      "projectChangelogs": true
+      "projectChangelogs": {
+        "file": false,
+        "createRelease": "github"
+      }
     },
     "version": {
       "specifierSource": "version-plans",
       "currentVersionResolver": "git-tag",
       "fallbackCurrentVersionResolver": "disk"
     }
-  }
+  },
+  "analytics": false
 }
